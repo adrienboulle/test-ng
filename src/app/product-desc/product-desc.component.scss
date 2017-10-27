@@ -1,0 +1,27 @@
+.product-img {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.product-name {
+  margin: 1em 2em;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  margin-top: auto;
+  margin-bottom: 1em;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}

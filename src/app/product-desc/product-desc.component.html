@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="product-name"><span>{{itemsService.currentItem.name}}</span></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7 product-img">
+      <img [src]="itemsService.currentItem.img"/>
+    </div>
+    <div class="col-md-5 product-description">
+      <label>Description :</label>
+      <span>{{itemsService.currentItem.desc}}</span>
+      <span>
+        <label>Poids :</label>
+        <span>{{itemsService.currentItem.weight | weightPipe}}</span>
+      </span>
+      <span>
+        <label>Prix :</label>
+        <span>{{itemsService.currentItem.price | pricePipe}}</span>
+      </span>
+      <span class="tags">
+        <label>Catégories :</label>
+        <span class="tag" *ngFor="let tag of itemsService.currentItem.tags">{{tag}}</span>
+      </span>
+    </div>
+  </div>
+</div>

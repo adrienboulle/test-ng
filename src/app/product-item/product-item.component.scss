@@ -1,0 +1,36 @@
+.product-img {
+  img {
+    width: 10em;
+    height: auto;
+  }
+}
+
+.more {
+  text-align: right;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tags {
+  margin-top: auto;
+}
+
+.container {
+  $border: 2px solid rgba(1, 1, 1, 0.1);
+  border-left: $border;
+  border-right: $border;
+
+  &.last {
+    border-bottom: $border;
+    border-radius: 0 0 10px 10px;
+  }
+}

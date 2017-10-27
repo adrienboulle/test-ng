@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Filtrer :</label>
+          <span class="tags">
+            <span *ngFor="let tag of tags">
+              <input name="options" type="checkbox" [(ngModel)]="itemsService.filters.tags[tag]" >
+              <span class="tag">
+                {{tag}}
+              </span>
+            </span>
+          </span>
+        </div>
+        <div class="col-md-6">
+          <label>Tri par :</label>
+          <span>
+            <input name="options" type="radio" [value]="'price'" [(ngModel)]="itemsService.filters.by" >Prix
+          </span>
+          <span>
+            <input name="options" type="radio" [value]="'weight'" [(ngModel)]="itemsService.filters.by" >Poids
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <label>Recherche :</label>
+      <input [(ngModel)]="itemsService.filters.query" type="text">
+    </div>
+  </div>
+</div>

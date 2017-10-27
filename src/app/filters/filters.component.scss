@@ -1,0 +1,22 @@
+label {
+  width: 100%;
+}
+
+[type="radio"] {
+  margin-right: 1em;
+}
+
+[class^=col-] {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: rgba(1, 1, 1, 0.1);
+  border-radius: 10px 10px 0 0;
+}

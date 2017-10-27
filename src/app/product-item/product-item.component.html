@@ -1,0 +1,25 @@
+<div class="container" [ngClass]="{ last: last }">
+  <div class="row">
+    <div class="col-md-2 product-img">
+      <img [src]="item.img">
+    </div>
+    <div class="col-md-6 product-description">
+      <span>{{item.name}}</span>
+      <span class="desc">{{item.desc}}</span>
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of item.tags">{{tag}}</span>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div>{{item.price | pricePipe}}</div>
+    </div>
+    <div class="col-md-2">
+      <div>{{item.weight | weightPipe}}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 more">
+      <a [routerLink]="['/products/details/', item.id]">En voir plus</a>
+    </div>
+  </div>
+</div>
